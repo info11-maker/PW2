@@ -1,0 +1,45 @@
+//for
+/*let myArray = [1, 2, 3, 4, 5];
+for(let i = 0; i < myArray.length; i++){
+if(myArray[i] == 3){
+alert(myArray[i]);
+break;
+}
+console.log(myArray[i]);
+}*/
+
+//foreach
+/*let myArray = [1, 2, 3, 4, 5];
+myArray.forEach(function(myArray) {
+    console.log(myArray);
+});*/
+
+//while
+/*var myArray = [1, 2, 3,4];
+var i = 0;
+while (myArray[i]) {
+  i++;
+}
+console.log(myArray);*/
+
+//for of
+/*const myArray = [1,2,3,4];
+
+for (const element of myArray) {
+  console.log(element);
+}*/
+
+//for in
+/*var txt = ""
+var myArray= [1, 2, 3, 4]; 
+var x;
+for (x in myArray) {
+  txt += myArray[x] + " ";
+}
+console.log(myArray);*/
+
+//map
+/*const myArray = [1, 2, 3, 4];
+const map = myArray.map(x => x * 2);
+
+console.log(map);*/
