@@ -1,0 +1,4 @@
+const myArray = [1, 2, 3, 4];
+const square = myArray.map(x => x * x);
+console.log(myArray);
+console.log(square);
