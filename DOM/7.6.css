@@ -1,0 +1,16 @@
+#board {
+    border: 5px solid black;
+    border-collapse: collapse;
+    height: 640px;
+    width: 640px;
+}
+#board tr td {
+    width:50px;
+}
+#board tr td#white {
+    background-color: white;
+    
+}
+#board tr td#black {
+    background-color: black;
+}

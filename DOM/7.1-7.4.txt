@@ -1,0 +1,54 @@
+//7.1
+/*document.addEventListener("DOMContentLoaded", () => {
+    document.body.style.backgroundColor = "red";
+   //alert(document.body.style.backgroundColor = "red");
+});*/
+
+//7.2
+//html
+<button id="clickButton">Orange</button>
+
+/*document.addEventListener("DOMContentLoaded", () => {
+const button = document.getElementById("clickButton");
+button.innerHTML = "Orange";
+button.addEventListener("click", () => {
+    document.body.style.backgroundColor = "orange";
+  });
+});*/
+
+//7.4
+//html
+ <ol>
+      <li>Disciplina 1</li>
+      <li>Disciplina 2</li>
+      <li>Disciplina 3</li>
+      <li>Disciplina 4</li>
+      <li>Disciplina 5</li>
+      <li>Disciplina 6</li>
+  </ol>
+
+/*document.addEventListener("DOMContentLoaded", () => {
+var objects = document.querySelectorAll("li");
+console.log(objects);
+
+var object = document.createElement('li');
+object.appendChild(document.createTextNode('Element ${i}'));
+document.querySelector('ol').appendChild(object);
+let i = 1;
+for (const object of objects) {
+    if(i % 2 === 0){
+        object.style.backgroundColor = "green";
+    }
+    if(i % 2 != 0){
+        object.style.backgroundColor = "violet";
+    }
+        i++;   
+    }   
+});*/
+
+//7.3
+/*var i = 0;
+let change = () => {
+  document.body.style.backgroundColor = "green";
+}
+setInterval(change, 3000);*/
