@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Pizza Order JavaScript</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="form-style-10">
+		<h1>Pizza Delivery!</h1>
+		<form>
+			<div class="section"><span>1</span>Alege</div>
+				<div class="inner-wrap">
+				<label>TakeAway<input type="radio" name="delivery" id = "carryout" checked ></label>
+				<label>Livrare(+ 10% la suma)<input type="radio" name="delivery" id ="delivery" onclick="insert(this.form)"></label>
+				<label>Address<input type="text" name="address" id="address" value="" readonly></label>
+			</div>
+		</form>
+		<form>
+			<div class="section"><span>2</span>Alege blatul</div>
+			<div class="inner-wrap">
+			<label><input type="radio" name="size" id="Subtire" checked> Subtire </label>
+			<label><input type="radio" name="size" id="Gros"> Gros </label>
+			</div>
+		</form>
+		<form>
+			<div class="section"><span>3</span>Alege forma blatului</div>
+			<div class="inner-wrap">
+			<label><input type="radio" name="size" id="rotund" checked> Rotunda</label>
+			<label><input type="radio" name="size" id="oval"> Oval </label>	
+			<label><input type="radio" name="size" id="Gros"> Gros </label>
+			</div>
+		</form>
+		<form>
+			<div class="section"><span>4</span>Alege tipul de pizza</div>
+			<div class="inner-wrap">
+			<select id="typePizza">
+				<label><option value="capriciossa">Capriciossa</option></label>
+				<label><option value="pepperoni">Pepperoni</option></label>
+				<label><option value="rancho">Rancho</option></label>
+			</select>
+			</div>
+		</form>
+		<form>
+			<div class="section"><span>5</span>Alege blatul</div>
+			<div class="inner-wrap">
+				<label><input type="radio" name="size" id="small" checked> Small 80.00 lei</label>
+				<label><input type="radio" name="size" id="medium"> Medium 90.00 lei</label>
+				<label><input type="radio" name="size" id="large"> Large 120.00 lei</label>
+			</div>
+		</form>
+		<form>
+			<div class="section"><span>6</span>Alege ingrediente adaugatoare</div>
+			<div class="inner-wrap">
+				<label><input type="checkbox" id="topping0"> Ceapa 5.00 lei</label>
+				<label><input type="checkbox" id="topping1"> Pepperoni 6.00 lei</label>
+				<label><input type="checkbox" id="topping2"> Extra Cheese 9.00 lei</label>
+				<label><input type="checkbox" id="topping3"> Sausage 8.00 lei</label>
+				<label><input type="checkbox" id="topping4"> Bacon 9.00 lei</label>
+				<label><input type="checkbox" id="topping6"> Mushrooms 5.00 lei</label>
+				<label><input type="checkbox" id="topping7"> Black Olives 6.00 lei<br></label>
+			</div>
+		</form>
+		<form>
+			<div class="section"><span>7</span>Plaseaza comanda</div>
+			<div class="inner-wrap">
+			<input type="button" value="Calculate Total" onclick = "total(this.form)">
+			<input type="button" onclick="blank(this.form)" id="reload" value="Reset Order">
+			</div>
+		</form>
+		</div>
+		<script src="index.js"></script>
+</body>
+</html>
