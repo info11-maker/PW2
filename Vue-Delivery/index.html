@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Pizza Order Vue js</title>
+	<link rel="stylesheet" href="styles.css">
+	<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <form id="app" @submit="checkForm" action="/something" method="post" novalidate="true">
+        <p v-if="errors.length">
+          <b>Please correct the following error(s):</b>
+          <ul>
+            <li v-for="error in errors">{{ error }}</li>
+          </ul>
+        </p>
+        <div class="form-style-10">
+          <h1>Pizza Delivery!</h1>
+          <form>
+            <div class="section"><span>1</span>Alege</div>
+				    <div class="inner-wrap">
+				    <label>TakeAway<input type="radio" name="delivery" id = "carryout" checked ></label>
+				    <label>Livrare(+ 10% la suma)<input type="radio" name="delivery" id ="delivery" onclick="insert(this.form)"></label>
+				    <label>Address<input type="text" name="address" id="address" value="" readonly></label>
+		      </form>
+        </div>
+        <form>
+          <div class="section"><span>2</span>Alege blatul</div>
+          <div class="inner-wrap">
+          <div id="v-model-radiobutton" class="demo">
+            <label for="one">Subtire<input type="radio" id="one" value="One" v-model="picked"/></label>
+            <label for="two">Gros<input type="radio" id="two" value="Two" v-model="picked" /></label>
+          </div>
+          </div>
+          <form>
+            <div class="section"><span>3</span>Alege forma blatului</div>
+            <div class="inner-wrap">
+            <div id="v-model-radiobutton" class="demo">
+            <label for="shape">Rotunda<input type="radio" id="shape" value="Rotunda" v-model="picked_elem" /></label>
+            <label for="shape_two">Ovala<input type="radio" id="shape_two" value="Ovala" v-model="picked_elem" /></label>
+          </div>
+          </div>
+          </form>
+          <form>
+            <div class="section"><span>4</span>Alege tipul de pizza</div>
+            <div class="inner-wrap">
+              <select id="type" v-model="type" name="type">
+                <option value="capriciossa">Capriciossa</option>
+                <option value="peperoni">Peperoni</option>
+                <option value="rancho">Rancho</option>
+              </select>
+            </div>
+          </form>
+          <form>
+            <div class="section"><span>5</span>Alege dimensiunea</div>
+              <div class="inner-wrap">
+               <div id="v-model-radiobutton" class="demo">
+                <label for="small">Mica 80.00 lei<input type="radio" id="small" value="Mica" v-model="picked_btn" /></label>
+                <label for="medium">Medie 90.00 lei<input type="radio" id="medium" value="Medie" v-model="picked_btn" /></label>
+                <label for="big">Mare 120.00 lei<input type="radio" id="big" value="Mare" v-model="picked_btn" /></label>
+              </div>
+              </div>
+          </form>
+            <div class="section"><span>6</span>Alege ingrediente adaugatoare</div>
+              <div class="inner-wrap">
+                <input type="number" name="weapons" v-model.number="weapons"> Cascaval <br/>
+                <input type="number" name="shields" v-model.number="shields"> Masline <br/>
+                <input type="number" name="coffee" v-model.number="coffee"> Ciuperci <br/>
+                <input type="number" name="ac" v-model.number="ac"> Sos de rosii <br/>
+                <input type="number" name="mousedroids" v-model.number="mousedroids"> Pepperoni <br/>
+              </div>
+
+        <p>Total: {{total}} </p>
+      
+        <p><input type="submit" value="Submit"></p>
+      </form>
+      
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      <script src="index.js"></script>
+    </body>
+    </html>
